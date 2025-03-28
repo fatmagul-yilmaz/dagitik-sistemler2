@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  worker1:
+    build: .
+    container_name: worker1
+    networks:
+      - compute_network
+
+  worker2:
+    build: .
+    container_name: worker2
+    networks:
+      - compute_network
+
+  worker3:
+    build: .
+    container_name: worker3
+    networks:
+      - compute_network
+
+networks:
+  compute_network:
+    driver: bridge
